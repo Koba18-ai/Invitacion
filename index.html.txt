@@ -1,0 +1,93 @@
+!DOCTYPE html
+html lang=es
+head
+meta charset=UTF-8
+meta name=viewport content=width=device-width, initial-scale=1.0
+titlePara Mi Ojona ❤️title
+
+style
+body{
+    margin0;
+    overflowhidden;
+    background#000;
+    displayflex;
+    justify-contentcenter;
+    align-itemscenter;
+    height100vh;
+    font-familyArial;
+}
+
+img{
+    max-width90%;
+    max-height90%;
+    border-radius20px;
+    box-shadow0 0 40px rgba(255,255,255,.3);
+    animationaparece 2s;
+}
+
+@keyframes aparece{
+from{
+opacity0;
+transformscale(.8);
+}
+to{
+opacity1;
+transformscale(1);
+}
+}
+
+.rosa{
+positionfixed;
+top-100px;
+font-size35px;
+animationcaer linear forwards;
+pointer-eventsnone;
+}
+
+@keyframes caer{
+0%{
+transformtranslateY(-100px) rotate(0deg);
+opacity1;
+}
+100%{
+transformtranslateY(120vh) rotate(720deg);
+opacity0;
+}
+}
+style
+head
+
+body
+
+img src=invitacion.jpg
+
+script
+
+function crearRosa(){
+
+const rosa=document.createElement(div);
+
+rosa.classList.add(rosa);
+
+rosa.innerHTML=🌹;
+
+rosa.style.left=Math.random()100+vw;
+
+rosa.style.animationDuration=(Math.random()3+4)+s;
+
+rosa.style.fontSize=(Math.random()20+25)+px;
+
+document.body.appendChild(rosa);
+
+setTimeout(()={
+rosa.remove();
+},7000);
+
+}
+
+setInterval(crearRosa,250);
+
+script
+
+body
+html
